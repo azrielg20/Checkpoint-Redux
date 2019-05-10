@@ -19,7 +19,7 @@
  * axios library.
  *
  * There are two specs, one simulates a successful response that responds with
- * an array of balloons: `["red baloon", "yellow balloon", "green ballooon"]`
+ * an array of balloons: `["red balloon", "yellow balloon", "green balloon"]`
  *
  * The other spec simulates a failed response with a status code `400`.
  *
