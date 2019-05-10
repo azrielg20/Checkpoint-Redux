@@ -3,7 +3,7 @@ import axios from "axios";
 export const GOT_BALLOONS = "GOT_BALLOONS";
 export const BALLOONS_ERROR = "BALLOONS_ERROR";
 
-export function createGotBaloonsAction(balloons) {
+export function createGotBalloonsAction(balloons) {
   return { type: GOT_BALLOONS, balloons };
 }
 
