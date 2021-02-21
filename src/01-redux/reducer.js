@@ -1,6 +1,10 @@
-
+import { PREVIEW_PET, ADOPT_PET, ADD_NEW_CAT, ADD_NEW_DOG, REMOVE_CAT, REMOVE_DOG } from './action-creators';
 const initialState = {
   // your code here
+  cats: [],
+  dogs: [],
+  petToPreview: {},
+  petToAdopt: {}
 };
 
 // Remember that reducers take in two parameters:
@@ -11,4 +15,20 @@ const initialState = {
 //  2. The action object, which we get whenever we use `store.dispatch`
 export default function(state = initialState, action) {
   // your code here
+  switch (action.type) {
+    case PREVIEW_PET:
+      return {...state, petToPreview: action.pet};
+    case ADOPT_PET:
+      return {...state, petToAdopt: action.pet};
+    case ADD_NEW_DOG:
+      return {...state, dogs: [...state.dogs, action.dog]};
+    case ADD_NEW_CAT:
+      return {...state, cats: [...state.cats, action.cat]};
+    case REMOVE_DOG:
+      return {...state, dogs: state.dogs.filter(dog => dog.id !== action.dogId)};
+    case REMOVE_CAT:
+      return {...state, cats: state.cats.filter(cat => cat.id !== action.catId)};
+    default:
+      return state;
+  }
 }
