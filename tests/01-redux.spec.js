@@ -31,7 +31,7 @@ function getRandomPet(pets) {
 
 describe('Action creators', () => {
   describe('previewPet', () => {
-    xit('returns properly formatted action', () => {
+    it('returns properly formatted action', () => {
       const pet = getRandomPet(DOGS);
 
       expect(previewPet(pet)).to.be.deep.equal({
@@ -42,7 +42,7 @@ describe('Action creators', () => {
   });
 
   describe('adoptPet', () => {
-    xit('returns properly formatted action', () => {
+    it('returns properly formatted action', () => {
       const pet = getRandomPet(DOGS);
 
       expect(adoptPet(pet)).to.be.deep.equal({
@@ -53,7 +53,7 @@ describe('Action creators', () => {
   });
 
   describe('addNewDog', () => {
-    xit('returns properly formatted action', () => {
+    it('returns properly formatted action', () => {
       const pet = getRandomPet(DOGS);
 
       expect(addNewDog(pet)).to.be.deep.equal({
@@ -64,7 +64,7 @@ describe('Action creators', () => {
   });
 
   describe('addNewCat', () => {
-    xit('returns properly formatted action', () => {
+    it('returns properly formatted action', () => {
       const pet = getRandomPet(CATS);
 
       expect(addNewCat(pet)).to.be.deep.equal({
@@ -75,7 +75,7 @@ describe('Action creators', () => {
   });
 
   describe('removeDog', () => {
-    xit('returns properly formatted action', () => {
+    it('returns properly formatted action', () => {
       const pet = getRandomPet(DOGS);
 
       expect(removeDog(pet)).to.be.deep.equal({
@@ -86,7 +86,7 @@ describe('Action creators', () => {
   });
 
   describe('removeCat', () => {
-    xit('returns properly formatted action', () => {
+    it('returns properly formatted action', () => {
       const pet = getRandomPet(CATS);
 
       expect(removeCat(pet)).to.be.deep.equal({
